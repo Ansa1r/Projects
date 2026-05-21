@@ -1,7 +1,7 @@
 def hello(): #Приветствие
     print("Приветствую в калькуляторе привычек.")
 
-def choose():
+def choose(): #глав меню
     voit = int(input("Выберите что вы хотите: \n"
                                 "1. Рассчёт времени привычки \n"
                                 "2. Выйти \n"))
@@ -11,7 +11,7 @@ def choose():
         print("Завершение программы")
         exit()
 
-def habits():
+def habits(): #привычка и время
     name = input("Введите имя привычки:")
     flag = False
     while not flag:
@@ -38,7 +38,7 @@ def habits():
             print("Ошибка, введите цифру от 1 до 3.")
 
 
-def habits_calc_hour(name):
+def habits_calc_hour(name): #калькулятор часов
     t = int(input("Введите время: "))
     month_hour = t * 30
     year_hour = month_hour * 12
@@ -59,7 +59,7 @@ def habits_calc_hour(name):
             "Это", month_hour, "часа в месяц и", year_hour, "часов в год. ")
         return habits()
 
-def habits_calc_min():
+def habits_calc_min(): #калькулятор минут
     t = int(input("Введите время: "))
     month_hour = (t * 30)/60
     year_hour = (month_hour * 12)
@@ -70,7 +70,7 @@ def habits_calc_min():
 
 
 
-def habits_calc_sec():
+def habits_calc_sec(): #калькулятор секунд
     t = int(input("Введите время: "))
     month_hour = (t * 30)/60
     year_hour = (month_hour * 12)
